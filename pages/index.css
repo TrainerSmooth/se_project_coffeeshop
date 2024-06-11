@@ -1,0 +1,513 @@
+@import url(../blocks/page.css);
+@import url(../blocks/header.css);
+
+@keyframes pulsaAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+.page {
+  min-width: 1100px;
+  max-width: 1600px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.header {
+  padding: 30px 80px 40px;
+  display: flex;
+  flex-direction: column;
+  min-height: 720px;
+  max-height: 800px;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  background-image: url("../images/background_header.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.header__title {
+  font-family: "Noto Serif";
+  font-style: italic;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 70px;
+  color: #2f80ed;
+  letter-spacing: -0.6px;
+  font-weight: 500;
+  margin: 183px 0 0;
+  max-width: 729px;
+}
+
+.header__subtitle {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 72px;
+  letter-spacing: -0.6px;
+}
+
+.header__image {
+  position: absolute;
+  top: 124px;
+  right: 5px;
+  width: 646px;
+  height: 568px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.nav__links {
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.nav__link {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+  z-index: 1;
+  color: #000;
+  gap: 20px;
+  text-decoration: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  flex-direction: row;
+}
+
+.nav__link:hover {
+  color: #000;
+  text-decoration: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.nav__logo {
+  position: relative;
+  left: -50px;
+  width: 105px;
+  height: 39px;
+}
+
+.header__description {
+  max-width: 683px;
+  font-family: "Noto Serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 20px 0 0;
+}
+
+.header__footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.header__paragraphs {
+  margin: 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #838383;
+}
+
+.recipes {
+  background: url("../images/background_recipes.svg") center no-repeat #0a2750;
+  background-size: cover;
+  padding: 100px 0 173px;
+}
+.recipes__title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 52px;
+  color: white;
+  margin: 80px 100px 0 24px;
+}
+
+.recipes__subtitle {
+  font-size: 20px;
+  color: white;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 80px 24px 0 80px;
+}
+
+.container__iframe {
+  position: relative;
+  top: 0;
+  left: auto;
+  bottom: 0;
+  right: auto;
+  width: 0;
+  height: 0;
+  gap: 40px;
+  z-index: 1;
+}
+
+.container__iframe:hover {
+  position: relative;
+  top: 0;
+  left: auto;
+  bottom: 0;
+  right: auto;
+  width: 0;
+  height: 0;
+  gap: 40px;
+  z-index: 1;
+}
+
+.recipes__videos {
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+  gap: 50px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.reservation {
+  background: url("../images/background_reservation.svg") center no-repeat
+    #d9e7ff;
+}
+
+.menu {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.contacts {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.footer {
+}
+
+.reservation {
+  padding: 100px 0 120px;
+}
+
+.reservation__title {
+  margin: 0 0 80px;
+  text-align: center;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 52px;
+}
+
+input {
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #838383;
+  background-color: #f9f9f9;
+}
+
+label {
+  margin: 0;
+  padding: 0;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #838383;
+}
+
+.reservation__form {
+  margin: 0 auto;
+}
+
+.form {
+  max-width: 385px;
+}
+
+.form__fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-family: Inter;
+}
+
+.form__label {
+  margin-bottom: 32px;
+  display: block;
+}
+
+.form__label_type_checkbox {
+  display: flex;
+  justify-content: center;
+}
+.form__input {
+  display: block;
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 8px;
+}
+
+.form__button {
+  width: 100%;
+  margin-bottom: 32px;
+  padding: 0;
+}
+
+.menu__title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 52px;
+}
+
+.menu__subtitle {
+  text-align: center;
+  font-family: "Noto Serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.menu {
+  background: url("../images/background_menu.svg") center no-repeat #fff;
+}
+
+.menu__cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 100px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.card {
+  width: 540px;
+}
+
+.menu__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.menu__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__list-divider {
+  border-bottom: 1px solid black;
+}
+
+.about {
+  background-color: #0a2850;
+  padding: 173px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  gap: 120px;
+}
+
+.about__title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  z-index: 1;
+  color: white;
+}
+
+.about__description {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  max-width: 660px;
+  z-index: 1;
+  color: white;
+}
+
+.about__circle {
+  background-color: #2f80ed;
+  width: 495px;
+  height: 495px;
+  border-radius: 50%;
+  position: absolute;
+  top: -121px;
+  left: -91px;
+  animation: pulsaAnimation 1.3s ease-in-out infinite;
+  z-index: 0;
+}
+
+.about__circle_animation_blurred {
+  animation: pulsaAnimationBlurred 1.3s ease-in-out infinite;
+}
+
+.footer {
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #0a2850 0%, #071931 100%);
+  color: white;
+  padding: 60px 80px 60px 80px;
+}
+
+.footer__column-heading {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.footer__column-link {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.footer__columns {
+  display: flex;
+}
+
+.footer__column_content_social {
+  margin-left: auto;
+}
+
+.footer__logo {
+  width: 57px;
+  height: 80px;
+}
+
+.footer__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__list-item {
+  margin: 0 0 16px;
+}
+
+.footer__list-item:last-child {
+  margin-bottom: 0;
+}
+
+.footer__column-heading {
+  margin: 0 0 20px;
+}
+
+.footer__column-link {
+  color: white;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.footer__column-link:hover {
+  color: #c1c1c1;
+}
+
+.footer__social-icon {
+  height: 16px;
+  width: 16px;
+}
+
+.footer__copyright {
+  margin: 108px 0 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.pulse {
+  animation: pulsaAnimation 10s infinite;
+  position: relative;
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  background-color: #2f80ed;
+  border-radius: 50%;
+}
+
+.pulse span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  animation: pulsaAnimation 4s ease-out infinite;
+  animation-delay: calc(1s * var(--i));
+}
